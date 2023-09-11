@@ -1,0 +1,340 @@
+.destination {
+    background-image: url("/Assets/destination/background-destination-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 1.5rem;
+    width: 100%;
+    height: 55.125rem;
+
+    // Tablet & Desktop:-
+    @include breakpoint-up(medium) {
+        background-image: url("/Assets/destination/background-destination-tablet.jpg");
+        height: 75rem;
+        padding-left: 1.9375rem;
+        padding-right: 1.9375rem;
+    }
+
+
+    @include breakpoint-up(large) {
+        background-image: url("/Assets/destination/background-destination-desktop.jpg");
+        height: 56.25rem;
+        padding-top: 2.5rem;
+        padding-left: 3rem;
+    } 
+
+    // Desktop-large:-
+    @include breakpoint-up(x-large) {
+        height: 70.25rem;
+    }
+}
+
+// 
+.dest {
+    font-family: 'Barlow Condensed', sans-serif;
+    padding: 0 1rem;
+
+    // Tablet:-
+    @include breakpoint-up(medium) {
+        padding: 0 4.75rem;
+    }
+
+    // Desktop:-
+    @include breakpoint-up(large) {
+        display: grid;
+        grid-template-areas: 
+        "col-1 col-2"
+        "col-1 col-3"
+        "col-1 col-4"
+        "col-1 col-5"
+        ;
+        // grid-gap: 4rem;
+        grid-column-gap: 9rem;
+    }
+
+    // Desktop-large:-
+    @include breakpoint-up(x-large) {
+        grid-column-gap: 11rem;
+    }
+
+    &__img {
+        margin-top: 5.5rem;
+
+        // Tablet:-
+        @include breakpoint-up(medium) {
+            margin-top: 4.5rem;
+        }
+
+        // Desktop:-
+        @include breakpoint-up(large) {
+            grid-area: col-1;
+            margin-top: 4.625rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+            font-weight: 100;
+            letter-spacing: 0.16875rem;
+            text-align: center;
+
+            // Tablet:-
+            @include breakpoint-up(medium) {
+                font-size: 1.25rem;
+                letter-spacing: 0.21125rem;
+            }
+
+            // Desktop:-
+            @include breakpoint-up(large) {
+                font-size: 1.75rem;
+            }
+        }
+
+        .planet_img {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 auto;
+            margin-top: 2.0625rem;
+            height: 10.625rem;
+            width: 10.625rem;
+
+            &.moon {
+                background-image: url("/Assets/destination/image-moon.png");
+            }
+
+            &.mars {
+                background-image: url("/Assets/destination/image-mars.png");
+            }
+
+            &.europa {
+                background-image: url("/Assets/destination/image-europa.png");
+            }
+
+            &.titan {
+                background-image: url("/Assets/destination/image-titan.png");
+            }
+
+            // Tablet:-
+            @include breakpoint-up(medium) {
+                height: 18.75rem;
+                width: 18.75rem;
+                margin-top: 3.5rem;
+            }
+
+            // Desktop:-
+            @include breakpoint-up(large) {
+                width: 27.8125rem;
+                height: 27.8125rem;
+                margin-top: 6.25rem;
+            }
+
+            // Desktop-large:-
+            @include breakpoint-up(x-large) {
+                height: 31rem;
+                width: 31rem;
+            }
+        }
+    }
+
+    //
+    &__text {
+        margin-top: 1.5625rem;
+        // border: 1px solid greenyellow;
+        text-align: center;
+
+        // Tablet:-
+        @include breakpoint-up(medium) {
+            margin-top: 3.25rem;
+        }
+
+        // Desktop:-
+        @include breakpoint-up(large) {
+            grid-area: col-3;
+        }
+
+        &__navbar {
+            font-size: 0.875rem;                
+            letter-spacing: 0.1475rem;
+
+            // Tablet:-
+            @include breakpoint-up(medium) {
+                font-size: 1rem;
+                letter-spacing: 0.16875rem;
+            }
+
+            // Desktop:-
+            @include breakpoint-up(large) {
+                text-align: left;
+                margin-top: 8rem;
+            }
+
+            a {
+                position: relative;
+                color: $light-blue;
+                transition: all 200ms ease-in-out;
+
+                &.active {
+                    color: $white;
+
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-right: 1.5625rem;
+
+                    // Tablet:-
+                    @include breakpoint-up(medium) {
+                        margin-right: 2.25rem;
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    height: 0.1875rem;
+                    width: 105%;
+                    position: absolute;
+                    bottom: -40%;
+                    left: -4%;
+                    background-color: $white;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: all 200ms ease-in-out;
+                }
+
+                &:hover {
+                    color: $white;
+                    opacity: 0.8;
+
+                    &::after {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+
+        // Planet-Heading:-
+        h1 {
+            font-family: 'Bellefair', serif;
+            font-size: 3.5rem;
+            font-weight: 100;
+            margin: 2rem 0 1.5rem 0;
+
+            // Tablet:-
+            @include breakpoint-up(medium) {
+                margin: 3rem 0 2.5rem 0;
+                font-size: 5rem;
+            }
+
+            // Desktop:-
+            @include breakpoint-up(large) {
+                font-size: 6.25rem;
+                text-align: left;
+                margin: 2rem 0;
+            }
+
+            // Desktop-large:-
+            @include breakpoint-up(x-large) {
+                font-size: 7rem;
+            }
+        }
+        
+        
+        //Plane-paragraph:- 
+        p {
+            font-size: 0.9375rem;
+            color: $light-blue;
+            line-height: 1.5625rem;
+
+            // Tablet:-
+            @include breakpoint-up(medium) {
+                font-size: 1rem;
+                line-height: 1.75rem;
+                padding: 0 1.75rem;
+            }
+
+            // Desktop:-
+            @include breakpoint-up(large) {
+                font-size: 1.125rem;
+                text-align: left;
+                padding: 0;
+                padding-right: 4rem;
+            }
+        }
+
+
+    }
+
+    &__stats {
+        // Tablet:-
+        @include breakpoint-up(medium) {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        // Desktop:-
+        @include breakpoint-up(large) {
+            grid-area: col-5;
+            justify-self: flex-start;
+        }
+
+
+        .item-1, .item-2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            
+
+            // Desktop:-
+            @include breakpoint-up(large) {
+                margin-right: 5rem;
+                margin-bottom: 0;
+            }
+
+            span {
+                font-family: 'Barlow Condensed', sans-serif;
+                font-size: 0.875rem;
+                color: $light-blue;
+                margin-bottom: 0.75rem;
+
+                 // Desktop:-
+                @include breakpoint-up(large) {
+                    display: block;
+                    text-align: left;
+                }
+            }
+    
+            p {
+                font-family: 'Bellefair', serif;
+                font-size: 1.75rem;
+                margin: 0.275rem 0;
+            }
+        }
+    }
+
+    // Line-break:-
+    hr {
+        width: 95%;
+        height: 0.0625rem;
+        border: none;
+        margin: 2rem 0;
+        opacity: 0.5;
+        background-color: $light-blue;
+
+        // Tablet:-
+        @include breakpoint-up(medium) {
+            width: 100%;
+            margin: 3.125rem 0;
+            opacity: 0.3;
+        }
+
+        // Desktop:-
+        @include breakpoint-up(large) {
+            grid-area: col-4;
+            width: 88%;
+            opacity: 0.2;
+            margin: 3rem 0 2rem 0;
+        }
+    }
+}

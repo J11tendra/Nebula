@@ -1,0 +1,150 @@
+.navbar {
+    // border: 1px solid magenta;
+    display: flex;
+    width: 100%;
+    // padding: 0 1.5rem;
+    justify-content: space-between;
+
+    // Tablet & Desktop:-
+    @include breakpoint-up(medium) {
+        align-items: center;
+        height: 6rem;
+    }
+
+    img {
+        width: 2.5rem;
+        height: 2.5rem;
+        cursor: pointer;
+
+        @include breakpoint-up(medium) {
+            height: 3rem;
+            width: 3rem;
+        }
+    }
+
+    nav {
+        .hamburger {
+            span {
+                display: block;
+                height: 0.1875rem;
+                width: 1.875rem;
+                background-color: $white;
+                margin-top: 0.5625rem;
+                transition: all 200ms ease-in-out;
+                transform-origin: -0.140625rem;
+            }
+        }
+
+        .hamburger-menu {
+            position: absolute;
+            backdrop-filter: blur(1rem);
+            height: 36.6875rem;
+            width: 68%;
+            transform: translateX(-50%);
+            left: 66%;
+            top: 5rem;
+            padding: 2.5rem 2.5rem;
+            z-index: 1000;
+
+            a {
+                display: block;
+                margin-bottom: 2rem;
+                font-family: 'Barlow Condensed', sans-serif;
+                font-size: 1rem;
+                letter-spacing: 0.16875rem;
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    height: 1.5rem;
+                    width: 0.25rem;
+                    background-color: $white;
+                    position: absolute;
+                    left: 98%;
+                    // top: 20%;
+                    opacity: 0;
+                    transition: opacity 300ms ease-in-out;
+                }
+
+                &:hover {
+
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .nav-links {
+            backdrop-filter: blur(1rem);
+
+            @include breakpoint-up(medium) {
+                height: 6rem;
+                display: flex;
+                align-items: center;
+            }
+
+            a {
+                font-family: 'Barlow Condensed', sans-serif;
+                font-size: 1rem;
+                margin-right: 3rem;
+                letter-spacing: 0.16875rem;
+                transition: all 200ms ease-in-out;
+                position: relative;
+
+                @include breakpoint-up(large) {
+                    margin-right: 4.8125rem;
+                } 
+
+                &.active {
+                    opacity: 1;
+
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+                
+                &:hover {
+                    opacity: 0.8;
+
+                    &::after {
+                        opacity: 0.8;
+                    }
+                }
+
+                // Pseudo-elemnt:-
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 0.1875rem;
+                    width: 100%;
+                    background: $white;
+                    left: -2%;
+                    bottom: -195%;
+                    opacity: 0;
+                    transition: all 200ms ease-in-out;
+                    pointer-events: none;
+                }
+
+            }
+        }
+    }
+
+    .open {
+
+        &__toggle {
+
+            span:first-child {
+                transform: rotate(45deg);
+            }
+
+            span:nth-child(2) {
+                opacity: 0;
+            }
+
+            span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }   
+}

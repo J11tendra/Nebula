@@ -1,0 +1,92 @@
+// Default State:-
+.has-fade {
+    visibility: hidden;
+}
+
+// Fade-In:-
+@keyframes fade-in {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+// Animation fade-in:-
+.fade-in {
+    animation: fade-in 300ms ease-in-out forwards;
+}
+
+
+// Fade-Out:-
+@keyframes fade-out {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    99% {
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        visibility: hidden;
+        opacity: 0;
+    } 
+}
+
+
+// Animation fade-out:-
+.fade-out {
+    animation: fade-out 300ms ease-in-out forwards;
+}
+
+
+/* Next Animation */
+@keyframes next1 {
+    from {
+        left: 0%;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes next2 {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+
+/* Prev Animation */
+@keyframes prev1 {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes prev2 {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0%;
+    }
+}

@@ -1,0 +1,46 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Bellefair', serif;
+    // font-family: 'Barlow Condensed', sans-serif;
+    color: $white;
+    overflow-x: hidden;
+}
+
+// Default Links:-
+a, 
+a:active,
+a:visited {
+    text-decoration: none;
+    color: $white;
+}
+
+// Hide\Show:-
+.hide-for-mobile {
+    @include breakpoint-down(small) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(medium) {
+        display: none;
+    }
+}
+
+// Default close:-
+.close {
+    visibility: hidden;
+}

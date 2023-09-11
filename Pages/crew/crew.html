@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Crew | Nebula</title>
+
+        <link rel="icon" href="/Assets/shared/logo.svg">
+
+        <link rel="stylesheet" href="/dist/style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        
+        <section class="crew">
+
+            <div class="navbar">
+
+                <img src="/Assets/shared/logo.svg" alt="Nebula">
+                <div class="rect-design hide-for-mobile"></div>
+                <nav>
+                    <div id="hamburger" class="hamburger hide-for-desktop">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="hamburger-menu" class="hamburger-menu has-fade hide-for-desktop">
+                        <a href="/">00 HOME</a>
+                        <a href="/Pages/destination/destination-moon.html">01 DESTINATION</a>
+                        <a href="/Pages/crew/crew-1.html">02 CREW</a>
+                        <a href="/Pages/technology/technology.html">03 TECHNOLOGY</a>
+                    </div>
+                    <div class="nav-links hide-for-mobile">
+                        <a class="link" href="/">HOME</a>
+                        <a class="link" href="/Pages/destination/destination-moon.html">DESTINATION</a>
+                        <a class="link active" href="/Pages/crew/crew-1.html">CREW</a>
+                        <a class="link" href="/Pages/technology/technology.html">TECHNOLOGY</a>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="container-main">
+                <div class="container">
+
+                    <div class="crew__content openner">
+
+                        <div class="heading">MEET YOUR CREW</div>
+                        <div class="crew_img">
+                            <img class="douglas" src="/Assets/crew/image-douglas-hurley.png" alt="Douglas Hurley">
+                        </div>
+                    
+                        <div class="image-indicator"></div>
+
+                        <div class="name">
+                            <h2>COMMANDER</h2>
+                            <h1>DOUGLAS HURLEY</h1>
+                        </div>
+                        <div class="description">
+                            <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+                        </div>
+
+
+                    </div>
+
+              
+
+                    <div class="crew__content">
+                        <div class="heading">MEET YOUR CREW</div>
+                        <div class="crew_img">
+                            <img class="mark" src="/Assets/crew/image-mark-shuttleworth.png" alt="Douglas Hurley">
+                        </div>
+
+                        <div class="image-indicator"></div>
+
+                        <div class="name">
+                            <h2>MISSION SPECIALIST</h2>
+                            <h1>MARK SHUTTLE</h1>
+                        </div>
+                        <div class="description">
+                            <p>Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.</p>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="crew__content">
+
+                        <div class="heading">MEET YOUR CREW</div>
+                        <div class="crew_img">
+                            <img class="victor" src="/Assets/crew/image-victor-glover.png" alt="Douglas Hurley">
+                        </div>
+
+                        <div class="image-indicator"></div>
+
+                        <div class="name">
+                            <h2>PILOT</h2>
+                            <h1>VICTOR GLOVER</h1>
+                        </div>
+                        <div class="description">
+                            <p>Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.</p>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="crew__content">
+
+                        <div class="heading">MEET YOUR CREW</div>
+                        <div class="crew_img">
+                            <img class="anousheh" src="/Assets/crew/image-anousheh-ansari.png" alt="Douglas Hurley">
+                        </div>
+
+                        <div class="image-indicator"></div>
+
+                        <div class="name">
+                            <h2>FLIGHT ENGINEER</h2>
+                            <h1>ANOUSHEH ANSARI</h1>
+                        </div>
+                        <div class="description">
+                            <p>Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="indicator">
+                        <div class="dot openned" attr="0" onclick="switchContent(this)"></div>
+                        <div class="dot" attr="1" onclick="switchContent(this)"></div>
+                        <div class="dot" attr="2" onclick="switchContent(this)"></div>
+                        <div class="dot" attr="3" onclick="switchContent(this)"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <script src="/App/Script/script.js"></script>
+    </body>
+</html>
