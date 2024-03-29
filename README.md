@@ -32,10 +32,6 @@ Coding card carousel for crew, technology and destination was new for me, Howeve
 ![Launch Vehicle Desktop](https://github.com/J11tendra/Nebula/assets/108735984/9b9a88db-6d06-470e-80b7-937dbbc5f279)
 
 
-**Website Preview Link**
-
-#### Url: [Visit Website](www.jitendra.com)
-
 **Features**
 
 -  Fully responsive website
